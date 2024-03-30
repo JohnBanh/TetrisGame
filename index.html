@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>FIT2102 A1 2023</title>
+    <style>
+      /* This makes all .text class elements bold */
+      .text {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JohnTris</h1>
+    <main id="main" class="flex row">
+      <svg id="svgCanvas">
+        <!-- game over text box -->
+        <g id="gameOver" visibility="hidden">
+          <!-- Original rectangle for 'Game Over' -->
+          <rect x="26" y="110" fill="white" height="48" width="149"></rect>
+          <text x="36" y="140">Game Over</text>
+          
+          <!-- New rectangle for 'Press R to Restart' below the 'Game Over' rectangle -->
+          <rect x="11" y="180" fill="white" height="48" width="180"></rect>
+          <text x="21" y="210">"R" to Restart</text>
+        </g>
+      </svg>
+      <div id="sideBar" class="flex col">
+        <div class="text">
+          <span>Preview Block: </span>
+        </div>
+        <svg id="svgPreview"></svg>
+        <div class="text">
+          <span>Held Block: </span>
+        </div>
+        <svg id="svgHold"></svg>
+        <div id="info" class="flex col">
+          <div class="text">
+            <span class="left">Level: </span>
+            <span class="right" id="levelText">...</span>
+          </div>
+          <div class="text">
+            <span class="left">Score: </span>
+            <span class="right" id="scoreText">...</span>
+          </div>
+          <div class="text">
+            <span class="left">Highscore: </span>
+            <span class="right" id="highScoreText">...</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
+
